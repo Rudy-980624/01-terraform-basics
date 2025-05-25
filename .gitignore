@@ -1,0 +1,35 @@
+# Terraform-specific
+*.tfstate
+*.tfstate.*
+.crash
+.terraform/
+.terraform.lock.hcl
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Local environment files
+set-aws-creds.ps1
+
+# AWS credentials (make sure these aren't accidentally committed!)
+*.pem
+*.key
+*.crt
+.aws/
+.env
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Node / Python / Other (if using them)
+node_modules/
+__pycache__/

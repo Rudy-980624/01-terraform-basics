@@ -1,0 +1,19 @@
+When starting Terraform session 
+Use command -
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\set-aws-creds.ps1
+
+To run "set-aws-cerds.ps1" script which will set environments and log into AWS 
+This will allow work to continue
+
+
+In set-aws-creds.ps1 file...
+
+$env:AWS_ACCESS_KEY_ID="access-id-key"
+$env:AWS_SECRET_ACCESS_KEY="secret-access-key"
+$env:AWS_DEFAULT_REGION="us-east-1"
+
+### TAKE NOTE ###
+Use .gitignore file in root of Git Repo 
+to prevent sensitive info from being pushed to GitHub.
