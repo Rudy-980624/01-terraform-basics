@@ -15,5 +15,5 @@ $env:AWS_SECRET_ACCESS_KEY="secret-access-key"
 $env:AWS_DEFAULT_REGION="us-east-1"
 
 ### TAKE NOTE ###
-Use .gitignore file in root of Git Repo 
-to prevent sensitive info from being pushed to GitHub.
+Use .gitignore file in root of Git Repo to prevent sensitive info from being pushed to GitHub.
+Add files to ignore in .gitignore

@@ -1,0 +1,119 @@
+Terraform Commands for Project (AWS + VS Code)
+
+1. terraform init
+🔹 Initializes a new Terraform project.
+
+When to use: 
+The first time you create or clone a Terraform project, or after changing providers/modules.
+
+What it does: 
+Downloads necessary provider plugins (e.g. AWS) and sets up your working directory.
+
+Example:    terraform init
+
+2. terraform validate
+🔍 Checks syntax and internal consistency of your .tf files.
+
+When to use: 
+After editing any .tf files to confirm they're valid.
+
+Example:    terraform validate
+
+3. terraform fmt
+🧹 Formats your Terraform code to standard style.
+
+When to use: 
+After writing/editing .tf files to keep them clean and consistent.
+
+Example:    terraform fmt
+
+4. terraform plan
+📋 Previews the changes Terraform will make (without applying them).
+
+When to use: 
+Before running apply, to see what will happen.
+
+Example:    terraform plan
+
+5. terraform apply
+🚀 Applies the changes and provisions the infrastructure.
+
+When to use: 
+After you’ve reviewed the plan and are ready to make changes live.
+
+Example:    terraform apply
+Tip: Add -auto-approve to skip the interactive "yes" prompt:
+            terraform apply -auto-approve
+
+6. terraform destroy
+🧨 Destroys all resources managed by Terraform.
+
+When to use: 
+To clean up everything created by Terraform.
+
+Example:    terraform destroy
+
+7. terraform show
+📖 Shows the current state in a human-readable format.
+
+When to use: 
+To inspect what’s been created or modified.
+
+Example:    terraform show
+
+8. terraform state list
+🗂️ Lists all tracked resources in the current state file.
+
+When to use: 
+To verify or debug resource tracking.
+
+Example:    terraform state list
+
+9. terraform output
+📦 Displays output values defined in outputs.tf.
+
+When to use: 
+After applying, to get readable outputs like bucket names, user ARNs, etc.
+
+Example:    terraform output
+
+10. terraform graph
+🕸️ Generates a visual dependency graph of your resources.
+
+When to use: 
+Optional, to understand resource relationships.
+
+Example:    terraform graph | dot -Tpng > graph.png
+
+11. terraform providers
+🔌 Lists the providers used in your configuration.
+
+When to use: 
+To confirm what Terraform plugins are active.
+
+Example:    terraform providers
+
+12. terraform taint / untaint
+⚠️ Manually mark a resource for recreation on next apply.
+
+When to use: 
+If something's broken and you want to force a re-create.
+
+Example:    terraform taint aws_iam_user.my_iam_user
+🧰 Bonus: VS Code Shortcuts
+Run terminal inside VS Code:
+Ctrl + ~ or go to Terminal > New Terminal
+
+Syntax highlighting: 
+Install the Terraform extension in VS Code (HashiCorp Terraform by HashiCorp)
+
+✅ Suggested Flow for Your AWS + Terraform Project
+
+            terraform init
+            terraform validate
+            terraform fmt
+            terraform plan
+            terraform apply
+            terraform output
+And when done:  
+            terraform destroy
