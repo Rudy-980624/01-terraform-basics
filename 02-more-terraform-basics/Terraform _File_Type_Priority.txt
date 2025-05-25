@@ -1,0 +1,36 @@
+🔹 Terraform File Types & Priority Order
+✅ main.tf (or any .tf file)
+Purpose: Defines resources, providers, data sources, and modules.
+
+Use: Core infrastructure code. Multiple .tf files are merged (alphabetically) when Terraform runs.
+
+Note: Filenames are arbitrary (main.tf, network.tf, compute.tf), but organizing them logically helps maintainability.
+
+✅ *.tfvars or terraform.tfvars
+Purpose: Defines input variable values.
+
+Use: Store variable values separate from code for flexibility (e.g., different environments).
+
+Priority: Loaded automatically if named:
+
+terraform.tfvars
+
+*.auto.tfvars
+
+Or manually via CLI: -var-file="dev.tfvars"
+
+✅ CLI Flags (terraform plan/apply -var ...)
+Purpose: Override variable values on the fly.
+
+Use: Quick overrides or automation scripts.
+
+Highest priority: CLI vars take precedence over .tfvars and default values.
+
+🔺 Variable Precedence (Highest to Lowest)
+CLI -var or -var-file
+
+terraform.tfvars or *.auto.tfvars
+
+Explicit *.tfvars loaded manually
+
+Default values in variables.tf
