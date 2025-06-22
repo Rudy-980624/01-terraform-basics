@@ -1,0 +1,19 @@
+# Maps
+
+# Maps are a collection of key-value pairs.
+variable "users" {
+  default = {
+    alice   : { country : "France", department : "Engineering" },
+    bob     : { country : "Germany", department : "Marketing" },
+    charlie : { country : "Italy", department : "Sales" },
+    dave    : { country : "Spain", department : "Support" },
+  }
+}
+
+# Their keys can be strings, numbers, or any other type.
+# The values can be any type, including other maps or lists.
+# The keys must be unique within the map.
+# # Maps are useful for storing structured data, such as user profiles, configuration settings, or any other data that can be represented as key-value pairs.
+# Maps are defined using curly braces `{}` and can be nested.
+# Users can be accessed using the `each.key` and `each.value` syntax in a `for_each` loop.
+# this is useful for creating resources dynamically based on the map's contents.
